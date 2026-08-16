@@ -1,0 +1,4 @@
+2026-08-15T21:46:22.740+0800 [INFO]  Terraform version: 1.15.8
+2026-08-15T21:46:22.770+0800 [INFO]  Go runtime version: go1.25.10
+2026-08-15T21:46:22.770+0800 [INFO]  CLI args: []string{"C:\\Program Files\\Terraform\\terraform.exe", "init"}
+2026-08-15T21:46:22.776+0800 [INFO]  CLI command args: []string{"init"}
