@@ -1,0 +1,142 @@
+PS D:\NwayNway\HelloCloud\Hello-Terraform> aws sts get-caller-identity
+
+aws: [ERROR]: An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation: The security token included in the request is invalid.
+PS D:\NwayNway\HelloCloud\Hello-Terraform> aws sts get-caller-identity --profile master-programmatic-admin
+
+aws: [ERROR]: An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation: The security token included in the request is invalid.
+PS D:\NwayNway\HelloCloud\Hello-Terraform> aws configure list-profiles
+default
+nway-shoppingcart-console-admin
+master-programmatic-admin
+PS D:\NwayNway\HelloCloud\Hello-Terraform> Get-ChildItem Env:AWS*
+>> 
+PS D:\NwayNway\HelloCloud\Hello-Terraform> aws sts get-caller-identity --profile master-programmatic-admin
+>> 
+
+aws: [ERROR]: An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation: The security token included in the request is invalid.
+PS D:\NwayNway\HelloCloud\Hello-Terraform> aws configure --profile master-programmatic-admin
+AWS Access Key ID [****************3L2B]: AKIATIFNROZRHZWXP24Z
+AWS Secret Access Key [****************hfj8]: 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
+Default region name [ap-southeast-1]: ap-southeast-1
+Default output format [json]: json
+
+PS D:\NwayNway\HelloCloud\Hello-Terraform> aws sts get-caller-identity --profile master-programmatic-admin --debug
+2026-08-22 15:12:23,400 - MainThread - awscli.clidriver - DEBUG - CLI version: aws-cli/2.36.2 Python/3.14.6 Windows/11 exe/AMD64
+2026-08-22 15:12:23,400 - MainThread - awscli.clidriver - DEBUG - Arguments entered to CLI: ['sts', 'get-caller-identity', '--profile', 'master-programmatic-admin', '--debug']
+2026-08-22 15:12:23,495 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.waiters.register_add_waiters for event building-command-table.main
+2026-08-22 15:12:23,497 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.alias.register_alias_commands for event building-command-table.main
+2026-08-22 15:12:23,497 - MainThread - botocore.hooks - DEBUG - Event building-command-table.main: calling handler <function add_waiters at 0x000001CBC6FC3270>
+2026-08-22 15:12:23,497 - MainThread - botocore.hooks - DEBUG - Event building-command-table.main: calling handler <bound method AliasSubCommandInjector.on_building_command_table of <awscli.alias.AliasSubCommandInjector object at 0x000001CBC700CAD0>>
+2026-08-22 15:12:23,498 - MainThread - botocore.loaders - DEBUG - Loading JSON file: C:\Program Files\Amazon\AWSCLIV2\awscli\data\cli.json
+2026-08-22 15:12:23,500 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.globalargs.register_parse_global_args for event top-level-args-parsed
+2026-08-22 15:12:23,501 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.cloudfront.register for event top-level-args-parsed
+2026-08-22 15:12:23,502 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function resolve_types at 0x000001CBC7416090>
+2026-08-22 15:12:23,503 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function no_sign_request at 0x000001CBC7416400>
+2026-08-22 15:12:23,503 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function resolve_verify_ssl at 0x000001CBC7416350>
+2026-08-22 15:12:23,503 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function resolve_cli_read_timeout at 0x000001CBC7416560>
+2026-08-22 15:12:23,504 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function resolve_cli_connect_timeout at 0x000001CBC74164B0>
+2026-08-22 15:12:23,504 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <built-in method update of dict object at 0x000001CBC743B740>
+2026-08-22 15:12:23,504 - MainThread - botocore.session - DEBUG - Setting config variable for profile to 'master-programmatic-admin'
+2026-08-22 15:12:23,506 - MainThread - awscli.clidriver - DEBUG - CLI version: aws-cli/2.36.2 Python/3.14.6 Windows/11 exe/AMD64
+2026-08-22 15:12:23,506 - MainThread - awscli.clidriver - DEBUG - Arguments entered to CLI: ['sts', 'get-caller-identity', '--profile', 'master-programmatic-admin', '--debug']
+2026-08-22 15:12:23,506 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.paramfile.register_init_uri_param_handler for event session-initialized
+2026-08-22 15:12:23,507 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.binaryformat.register_init_binary_formatter for event session-initialized
+2026-08-22 15:12:23,507 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.clidriver.register_no_pager_handler for event session-initialized
+2026-08-22 15:12:23,507 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.assumerole.register_assume_role_provider for event session-initialized
+2026-08-22 15:12:23,508 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.timestampformat.register_timestamp_format for event session-initialized
+2026-08-22 15:12:23,509 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.history.register_history_mode for event session-initialized
+2026-08-22 15:12:23,516 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.sso.register_sso_commands for event session-initialized
+2026-08-22 15:12:23,528 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function add_timestamp_parser at 0x000001CBC7441380>
+2026-08-22 15:12:23,528 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function register_uri_param_handler at 0x000001CBC6C06FB0>
+2026-08-22 15:12:23,529 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function add_binary_formatter at 0x000001CBC7440720>
+2026-08-22 15:12:23,529 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function no_pager_handler at 0x000001CBC6FAB110>
+2026-08-22 15:12:23,529 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function inject_assume_role_provider_cache at 0x000001CBC74410C0>
+2026-08-22 15:12:23,534 - MainThread - botocore.utils - DEBUG - IMDS ENDPOINT: http://169.254.169.254/
+2026-08-22 15:12:23,535 - MainThread - botocore.credentials - DEBUG - Skipping environment variable credential check because profile name was explicitly set.
+2026-08-22 15:12:23,535 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function attach_history_handler at 0x000001CBC7441640>
+2026-08-22 15:12:23,536 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function inject_json_file_cache at 0x000001CBC750CCA0>
+2026-08-22 15:12:23,602 - MainThread - botocore.loaders - DEBUG - Loading JSON file: C:\Program Files\Amazon\AWSCLIV2\awscli\botocore\data\sts\2011-06-15\service-2.json
+2026-08-22 15:12:23,606 - MainThread - botocore.hooks - DEBUG - Event building-command-table.sts: calling handler <function add_waiters at 0x000001CBC6FC3270>
+2026-08-22 15:12:23,672 - MainThread - botocore.hooks - DEBUG - Event building-command-table.sts: calling handler <bound method AliasSubCommandInjector.on_building_command_table of <awscli.alias.AliasSubCommandInjector object at 0x000001CBC700CAD0>>
+2026-08-22 15:12:23,674 - MainThread - awscli.clidriver - DEBUG - OrderedDict()
+2026-08-22 15:12:23,674 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.streamingoutputarg.register_streaming_output_arg for event building-argument-table.sts.get-caller-identity
+2026-08-22 15:12:23,675 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.cliinput.register_cli_input_args for event building-argument-table.sts.get-caller-identity
+2026-08-22 15:12:23,676 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.paginate.register_pagination for event building-argument-table.sts.get-caller-identity
+2026-08-22 15:12:23,677 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.generatecliskeleton.register_generate_cli_skeleton for event building-argument-table.sts.get-caller-identity
+2026-08-22 15:12:23,678 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.sts.get-caller-identity: calling handler <function add_streaming_output_arg at 0x000001CBC750DC70>
+2026-08-22 15:12:23,679 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.sts.get-caller-identity: calling handler <function add_cli_input_json at 0x000001CBC750E560>
+2026-08-22 15:12:23,679 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.sts.get-caller-identity: calling handler <function add_cli_input_yaml at 0x000001CBC750F480>
+2026-08-22 15:12:23,679 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.sts.get-caller-identity: calling handler <function unify_paging_params at 0x000001CBC750FCC0>
+2026-08-22 15:12:23,742 - MainThread - botocore.loaders - DEBUG - Loading JSON file: C:\Program Files\Amazon\AWSCLIV2\awscli\botocore\data\sts\2011-06-15\paginators-1.json
+2026-08-22 15:12:23,742 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.sts.get-caller-identity: calling handler <function add_generate_skeleton at 0x000001CBC7754B40>
+2026-08-22 15:12:23,743 - MainThread - botocore.hooks - DEBUG - Event before-building-argument-table-parser.sts.get-caller-identity: calling handler <bound method OverrideRequiredArgsArgument.override_required_args of <awscli.customizations.cliinput.CliInputJSONArgument object at 0x000001CBC773D2B0>>
+2026-08-22 15:12:23,743 - MainThread - botocore.hooks - DEBUG - Event before-building-argument-table-parser.sts.get-caller-identity: calling handler <bound method OverrideRequiredArgsArgument.override_required_args of <awscli.customizations.cliinput.CliInputYAMLArgument object at 0x000001CBC773D550>>
+2026-08-22 15:12:23,743 - MainThread - botocore.hooks - DEBUG - Event before-building-argument-table-parser.sts.get-caller-identity: calling handler <bound method GenerateCliSkeletonArgument.override_required_args of <awscli.customizations.generatecliskeleton.GenerateCliSkeletonArgument object at 0x000001CBC773D6A0>>
+2026-08-22 15:12:23,743 - MainThread - botocore.hooks - DEBUG - Event building-command-table.sts_get-caller-identity: calling handler <function add_waiters at 0x000001CBC6FC3270>
+2026-08-22 15:12:23,743 - MainThread - botocore.hooks - DEBUG - Event building-command-table.sts_get-caller-identity: calling handler <bound method AliasSubCommandInjector.on_building_command_table of <awscli.alias.AliasSubCommandInjector object at 0x000001CBC700CAD0>>
+2026-08-22 15:12:23,744 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.sts.get-caller-identity.cli-input-json: calling handler <awscli.paramfile.URIArgumentHandler object at 0x000001CBC7489550>
+2026-08-22 15:12:23,745 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.sts.get-caller-identity.cli-input-yaml: calling handler <awscli.paramfile.URIArgumentHandler object at 0x000001CBC7489550>
+2026-08-22 15:12:23,745 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.sts.get-caller-identity.generate-cli-skeleton: calling handler <awscli.paramfile.URIArgumentHandler object at 0x000001CBC7489550>
+2026-08-22 15:12:23,745 - MainThread - botocore.hooks - DEBUG - Event calling-command.sts.get-caller-identity: calling handler <bound method CliInputArgument.add_to_call_parameters of <awscli.customizations.cliinput.CliInputJSONArgument object at 0x000001CBC773D2B0>>
+2026-08-22 15:12:23,745 - MainThread - botocore.hooks - DEBUG - Event calling-command.sts.get-caller-identity: calling handler <bound method CliInputArgument.add_to_call_parameters of <awscli.customizations.cliinput.CliInputYAMLArgument object at 0x000001CBC773D550>>
+2026-08-22 15:12:23,745 - MainThread - botocore.hooks - DEBUG - Event calling-command.sts.get-caller-identity: calling handler <bound method GenerateCliSkeletonArgument.generate_skeleton of <awscli.customizations.generatecliskeleton.GenerateCliSkeletonArgument object at 0x000001CBC773D6A0>>
+2026-08-22 15:12:23,746 - MainThread - botocore.hooks - DEBUG - Event before-create-client: calling handler <function register_session_id_event.<locals>._inject_session_id at 0x000001CBC6FC2CF0>
+2026-08-22 15:12:23,766 - MainThread - botocore.credentials - DEBUG - Looking for credentials via: assume-role
+2026-08-22 15:12:23,766 - MainThread - botocore.credentials - DEBUG - Looking for credentials via: assume-role-with-web-identity
+2026-08-22 15:12:23,766 - MainThread - botocore.credentials - DEBUG - Looking for credentials via: sso
+2026-08-22 15:12:23,767 - MainThread - botocore.credentials - DEBUG - Looking for credentials via: shared-credentials-file
+2026-08-22 15:12:23,768 - MainThread - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-08-22 15:12:23,769 - MainThread - botocore.loaders - DEBUG - Loading JSON file: C:\Program Files\Amazon\AWSCLIV2\awscli\botocore\data\endpoints.json
+2026-08-22 15:12:23,801 - MainThread - botocore.hooks - DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x000001CBC62DF7F0>
+2026-08-22 15:12:23,857 - MainThread - botocore.loaders - DEBUG - Loading JSON file: C:\Program Files\Amazon\AWSCLIV2\awscli\botocore\data\sts\2011-06-15\endpoint-rule-set-1.json
+2026-08-22 15:12:23,858 - MainThread - botocore.loaders - DEBUG - Loading JSON file: C:\Program Files\Amazon\AWSCLIV2\awscli\botocore\data\partitions.json
+2026-08-22 15:12:23,859 - MainThread - botocore.hooks - DEBUG - Event creating-client-class.sts: calling handler <function add_generate_presigned_url at 0x000001CBC6883B60>
+2026-08-22 15:12:23,859 - MainThread - botocore.configprovider - DEBUG - Looking for endpoint for sts via: environment_service
+2026-08-22 15:12:23,860 - MainThread - botocore.configprovider - DEBUG - Looking for endpoint for sts via: environment_global
+2026-08-22 15:12:23,860 - MainThread - botocore.configprovider - DEBUG - Looking for endpoint for sts via: config_service
+2026-08-22 15:12:23,860 - MainThread - botocore.configprovider - DEBUG - Looking for endpoint for sts via: config_global
+2026-08-22 15:12:23,860 - MainThread - botocore.configprovider - DEBUG - No configured endpoint found.
+2026-08-22 15:12:23,871 - MainThread - botocore.endpoint - DEBUG - Setting sts timeout as (60, 60)
+2026-08-22 15:12:23,873 - MainThread - botocore.hooks - DEBUG - Event provide-client-params.sts.GetCallerIdentity: calling handler <function base64_decode_input_blobs at 0x000001CBC74407D0>
+2026-08-22 15:12:23,873 - MainThread - botocore.hooks - DEBUG - Event before-parameter-build.sts.GetCallerIdentity: calling handler <function generate_idempotent_uuid at 0x000001CBC6927E20>
+2026-08-22 15:12:23,874 - MainThread - botocore.hooks - DEBUG - Event before-parameter-build.sts.GetCallerIdentity: calling handler <function _handle_request_validation_mode_member at 0x000001CBC694EF00>
+2026-08-22 15:12:23,874 - MainThread - botocore.regions - DEBUG - Calling endpoint provider with parameters: {'Region': 'ap-southeast-1', 'UseDualStack': False, 'UseFIPS': False, 'UseGlobalEndpoint': False}
+2026-08-22 15:12:23,874 - MainThread - botocore.regions - DEBUG - Endpoint provider result: https://sts.ap-southeast-1.amazonaws.com
+2026-08-22 15:12:23,875 - MainThread - botocore.hooks - DEBUG - Event before-call.sts.GetCallerIdentity: calling handler <function inject_api_version_header_if_needed at 0x000001CBC694DC70>
+2026-08-22 15:12:23,875 - MainThread - botocore.endpoint - DEBUG - Making request for OperationModel(name=GetCallerIdentity) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'aws-cli/2.36.2 md/awscrt#0.36.0 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.14.6 md/pyimpl#CPython m/Z,E,n,b cfg/retry-mode#standard md/installer#exe sid/4c5c4d9f3398 md/prompt#off md/command#sts.get-caller-identity'}, 'body': {'Action': 'GetCallerIdentity', 'Version': '2011-06-15'}, 'url': 'https://sts.ap-southeast-1.amazonaws.com/', 'context': {'client_region': 'ap-southeast-1', 'client_config': <botocore.config.Config object at 0x000001CBC6F6DBD0>, 'has_streaming_input': False, 'auth_type': None, 'unsigned_payload': None, 'auth_options': ['aws.auth#sigv4', 'aws.auth#sigv4a']}}
+2026-08-22 15:12:23,875 - MainThread - botocore.hooks - DEBUG - Event request-created.sts.GetCallerIdentity: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CBC6F5DFD0>>        
+2026-08-22 15:12:23,876 - MainThread - botocore.hooks - DEBUG - Event choose-signer.sts.GetCallerIdentity: calling handler <function set_operation_specific_signer at 0x000001CBC6927B60>
+2026-08-22 15:12:23,876 - MainThread - botocore.hooks - DEBUG - Event choose-signer.sts.GetCallerIdentity: calling handler <function _set_auth_scheme_preference_signer at 0x000001CBC694EFB0>
+2026-08-22 15:12:23,876 - MainThread - botocore.auth - DEBUG - Calculating signature using v4 auth.
+2026-08-22 15:12:23,877 - MainThread - botocore.auth - DEBUG - CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:sts.ap-southeast-1.amazonaws.com
+x-amz-date:20260822T071223Z
+
+content-type;host;x-amz-date
+ab821ae955788b0e33ebd34c208442ccfc2d406e2edc5e7a39bd6458fbb4f843
+2026-08-22 15:12:23,877 - MainThread - botocore.auth - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20260822T071223Z
+20260822/ap-southeast-1/sts/aws4_request
+00946dfced5cc353569233f9cd7d4adec7f1ec2dc75dce1e016ccdf471be9fbb
+2026-08-22 15:12:23,877 - MainThread - botocore.auth - DEBUG - Signature:
+47e914648a07e49b615437511e09b42f19213f4a9c55b66cfa7438ddfbbe0d16
+2026-08-22 15:12:23,877 - MainThread - botocore.hooks - DEBUG - Event request-created.sts.GetCallerIdentity: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x000001CBC7742E90>>
+2026-08-22 15:12:23,878 - MainThread - botocore.hooks - DEBUG - Event request-created.sts.GetCallerIdentity: calling handler <function add_retry_headers at 0x000001CBC694E770>
+2026-08-22 15:12:23,878 - MainThread - botocore.endpoint - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sts.ap-southeast-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'aws-cli/2.36.2 md/awscrt#0.36.0 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.14.6 md/pyimpl#CPython m/Z,E,n,b cfg/retry-mode#standard md/installer#exe sid/4c5c4d9f3398 md/prompt#off md/command#sts.get-caller-identity', 'X-Amz-Date': b'20260822T071223Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIATIFNROZRHZWXP24Z/20260822/ap-southeast-1/sts/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=47e914648a07e49b615437511e09b42f19213f4a9c55b66cfa7438ddfbbe0d16', 'amz-sdk-invocation-id': b'f83d9b7a-94ab-4922-8fb5-6a703df650f5', 'amz-sdk-request': b'attempt=1', 'Content-Length': '43'}>
+2026-08-22 15:12:23,879 - MainThread - botocore.httpsession - DEBUG - Certificate path: C:\Program Files\Amazon\AWSCLIV2\awscli\botocore\cacert.pem
+2026-08-22 15:12:23,879 - MainThread - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): sts.ap-southeast-1.amazonaws.com:443
+2026-08-22 15:12:24,199 - MainThread - urllib3.connectionpool - DEBUG - https://sts.ap-southeast-1.amazonaws.com:443 "POST / HTTP/1.1" 200 422
+2026-08-22 15:12:24,200 - MainThread - botocore.parsers - DEBUG - Response headers: {'x-amzn-RequestId': '30107525-e232-4e12-9353-fabfd6478159', 'X-Amz-Sts-Extended-Request-Id': 'MTphcC1zb3V0aGVhc3QtMTpTOjE3ODczODI3NDMwODE6UjpqMFFoakpyaQ==', 'Content-Type': 'text/xml', 'Content-Length': '422', 'Date': 'Sat, 22 Aug 2026 07:12:23 GMT'}
+2026-08-22 15:12:24,201 - MainThread - botocore.parsers - DEBUG - Response body:
+b'<GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">\n  <GetCallerIdentityResult>\n    <Arn>arn:aws:iam::223702251106:user/master-programmatic-admin</Arn>\n    <UserId>AIDATIFNROZRGCZTNRH4M</UserId>\n    <Account>223702251106</Account>\n  </GetCallerIdentityResult>\n  <ResponseMetadata>\n    <RequestId>30107525-e232-4e12-9353-fabfd6478159</RequestId>\n  </ResponseMetadata>\n</GetCallerIdentityResponse>\n'
+2026-08-22 15:12:24,202 - MainThread - botocore.hooks - DEBUG - Event needs-retry.sts.GetCallerIdentity: calling handler <bound method RetryHandler.needs_retry of <botocore.retries.standard.RetryHandler object at 0x000001CBC8008980>> 
+2026-08-22 15:12:24,203 - MainThread - botocore.retries.standard - DEBUG - Not retrying request.
+2026-08-22 15:12:24,203 - MainThread - botocore.hooks - DEBUG - Event after-call.sts.GetCallerIdentity: calling handler <bound method RetryQuotaChecker.release_retry_quota of <botocore.retries.standard.RetryQuotaChecker object at 0x000001CBC773F8C0>>
+2026-08-22 15:12:24,204 - MainThread - awscli.formatter - DEBUG - RequestId: 30107525-e232-4e12-9353-fabfd6478159
+
+PS D:\NwayNway\HelloCloud\Hello-Terraform> 
